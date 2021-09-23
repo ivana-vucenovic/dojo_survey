@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel = "stylesheet" href = "{% static 'css/form.css' %}"> 
+</head>
+<body>
+    <form id = "user" action="/process" method='POST'>
+        {% csrf_token %}
+        <label>Your name</label>
+        <input type = "text" name = "first_name">
+        <fieldset>
+            <legend>Dojo Location</legend>
+            
+            <input id = "chicago" type = "radio" name = "city" value ="chicago">
+            <label for = "chicago">Chicago</label>
+
+            <input id = "sant_jose" type = "radio" name = "city" value = "sant_jose">
+            <label for = "sant_jose">Sant Jose</label>
+
+            <input id = "dallas" type = "radio" name = "city" value = "dallas">
+            <label for = "dallas">Dallas</label>
+
+            <input id = "boise" type = "radio" name = "city" value = "boise">
+            <label for = "boise">Boise</label>
+        </fieldset>
+        <fieldset>
+            <legend>Favorite Language:</legend>
+
+            <input id = "python" type ="checkbox" name = "leng" value = "python">
+            <label for = "python">Python</label>
+
+            <input id = "java" type ="checkbox" name = "leng" value = "java">
+            <label for = "java">Java</label>
+
+            <input id = "js" type ="checkbox" name ="leng" value = "js">
+            <label for = "js">JavaScript</label>
+
+            <input id = "php" type ="checkbox" name = "leng" value = "php">
+            <label for = "php">PHP</label>
+        </fieldset>
+        <label>Comment (optional)</label>
+            <textarea name = "comment"></textarea>
+        <input type = "submit" value="User">  
+    </form>
+</body>
+</html>

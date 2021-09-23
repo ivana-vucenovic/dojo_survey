@@ -1,0 +1,10 @@
+h1 {
+    color: blue;
+}
+p {
+    color: cornflowerblue;
+}
+#wraper {
+    width: 800px;
+    background-color: rgb(243, 238, 172);
+}

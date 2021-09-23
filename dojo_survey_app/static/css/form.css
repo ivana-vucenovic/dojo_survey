@@ -1,0 +1,12 @@
+#user {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: large;
+    width: 500px;
+    
+}
+input{
+    background-color: darksalmon;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
