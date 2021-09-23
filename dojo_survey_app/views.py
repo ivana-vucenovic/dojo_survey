@@ -1,5 +1,5 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 
 def process(request):
     if request.method == 'GET':
@@ -10,10 +10,10 @@ def process(request):
         request.session['comment']=request.POST['comment']
         request.session['leng']=request.POST.getlist('leng')
         
-
     return redirect ('/process')
 
 def index(request):
+   
     return render (request, 'django.html')
 
 
